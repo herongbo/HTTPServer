@@ -5,7 +5,7 @@ import http.Request;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Arrays;
 import java.util.List;
 
 public class ByteReader {
@@ -17,109 +17,85 @@ public class ByteReader {
         buffer = new byte[bufferSize];
     }
 
+    //设置大缓冲区可能会等待
     public ByteReader(InputStream input) {
-        this(input, 1024);
+        this(input, 1024 * 64);
     }
 
-    int pre = 0;
-    int temp = 0;
-
     public void read() throws IOException {
+        int pre = 0;
+        int temp = 0;
+
         long start = System.currentTimeMillis();
+        Request request = null;
 
         List<String> headerList = new ArrayList<>();
-        Request request = null;
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ByteArrayOutputStream fos = new ByteArrayOutputStream();
 
+        long size = 0;
         int len = 0;
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        System.out.println("reuse buffer size  " + buffer.length);
 
-//        while ((len = input.read(buffer)) != -1) {
-//            System.out.println(len + " " + input.available());
-//            baos.write(buffer, 0, len);
-////            if (len < buffer.length) {
-////                break;
-////            }
-//        }
-
-
-        int size = 0;
-
-        //测试缓冲区大小，每次读入的最大值是 65536 ？
-        //现在测试到了1224的buffersize
-
-        while (input.available() > 0) {
+        while (true) {
             len = input.read(buffer);
-//            System.out.println("wait for upload "+len);
-            baos.write(buffer, 0, len);
-//            System.out.println("available" + input.available());
-//            if (len < buffer.length) {//                System.out.println("break!");
-//                break;
-//            }
-        }
+            bos.write(buffer, 0, len);
+            size += len;
 
-        input.close();
-        buffer = baos.toByteArray();
-//        System.out.println("request size" + buffer.length);
-//        System.out.println("mysize" + size);
-        System.out.println(new String(buffer));
-
-        System.out.println(buffer.length);
-
-        System.out.println("timer log1 " + (System.currentTimeMillis() - start));
-        int i = 0;
-        for (i = 0; i < buffer.length; i++) {
-            if (buffer[i] == '\r' && buffer[i + 1] == '\n') {
-                String str = readString(buffer, pre, i);
-//                System.err.println(str + ":x" + str.length());
-                pre = i + 2;
-                if (str.length() == 0) {
-//                    System.out.println("nxx");
-//                    headerList.forEach(System.out::println);
-                    request = new Request(headerList);
-                    System.out.println("header parse end");
-//                    System.out.println(request);
-                    System.err.println("header end");
+            if (input.available() == 0 && size > 1024 * 16) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                if (input.available() == 0) {
                     break;
                 }
+            } else if (input.available() == 0 && size < 1024 * 16) {
+                break;
+            }
+        }
+
+        buffer = bos.toByteArray();
+
+        System.out.println("timer log1 " + (System.currentTimeMillis() - start));
+        int i;
+        for (i = 0; i < buffer.length; i++) {
+            if (buffer[i] == '\r' && buffer[i + 1] == '\n') {
+                String str = new String(buffer, pre, i - pre);
+                if (i - pre <= 1) {
+                    System.out.println("yes");
+                    request = new Request(headerList);
+                    System.out.println("header parse end");
+                    break;
+                }
+                pre = i + 2;
                 headerList.add(str);
             }
         }
-        System.out.println("\n\nbody");
+
+        //重置指针
         temp = pre;
         System.out.println("timer log2 " + (System.currentTimeMillis() - start));
 
         String contentDesposition = null;
-        String name = "";
-        String fileName = "";
-        for (; i < buffer.length; i++) {
-            if (buffer[i] == '\r' && buffer[i + 1] == '\n') {
-                String str = readString(buffer, temp, i);
-                if (str.contains(request.boundary)) {
-                    System.err.println("boundary!!");
-                    System.out.println(str);
-                    System.out.println(request.boundary);
+        String name = null;
+        String fileName = null;
+        System.out.println(request.boundary);
+        System.out.println(request.content_type);
 
-                    //现在需要判断是否读到了数据
-                    //从boundary开始，读到了boundary意味着
-                    //应该用文件名称判断文件是否为空
-                    //空的文件名直接舍弃
-                    //有名称的文件，保留
-                    if (true || out.toByteArray().length > 0) {
-                        System.err.println("process with file ");
-                        //文件好像丢失了一些东西，检查哪里有问题
-                        //将per到i的数据写写入缓冲区，保存到文件
-
-                        //pre
+        if (request.content_type.equals("multipart/form-data")) {
+            for (; i < buffer.length; i++) {
+                if (buffer[i] == '\r' && buffer[i + 1] == '\n') {
+                    if (byteCheckContains(buffer, temp, i, request.boundary.getBytes(), '-')) {
+                        System.err.println("processing with file ");
+                        //判断是否是第一个boundary
                         if (temp - 2 - pre > 0) {
-                            System.err.println(pre + " " + (temp - 2 - pre));
                             if (fileName != null) {
                                 //文件类型
-                                out.write(buffer, pre, temp - 2 - pre);
-                                byte[] data = out.toByteArray();
-                                out.reset();
-                                File f = new File("C:\\Users\\JDUSER\\Desktop\\what\\" + new Date().hashCode() + fileName);
+                                fos.write(buffer, pre, temp - 2 - pre);
+                                byte[] data = fos.toByteArray();
+                                fos.reset();
+                                File f = new File("C:\\Users\\JDUSER\\Desktop\\what\\" + fileName);
                                 f.createNewFile();
                                 FileOutputStream is = new FileOutputStream(f);
                                 is.write(data);
@@ -128,59 +104,103 @@ public class ByteReader {
                                 System.out.println("file saved in " + f);
                             } else {
                                 //字符类型
-                                System.out.println("data");
                                 String data = new String(buffer, pre, temp - 2 - pre, Config.CHARSET);
                                 System.out.println(data);
                             }
 
-                        } else {
-                            //webboundary第一次出现
                         }
+                        temp = i + 2;
+                        pre = i + 2;
+                    } else if (byteCheckStartWith(buffer, temp, i, "Content-Disposition: form-data;".getBytes())) {
+
+                        String str = new String(buffer, temp, i - temp, Config.CHARSET);
+                        System.out.println("content data " + str);
+
+                        String[] contents = str.split(";");
+                        if (contents.length == 3) {
+                            //文件
+                            contentDesposition = contents[0].substring(contents[0].indexOf(":") + 2);
+                            name = contents[1].substring(contents[1].indexOf("\"") + 1, contents[1].length() - 1);
+                            fileName = contents[2].substring(contents[2].indexOf("\"") + 1, contents[2].length() - 1);
+                        } else if (contents.length == 2) {
+                            //字符
+                            contentDesposition = contents[0].substring(contents[0].indexOf(":") + 2);
+                            name = contents[1].substring(contents[1].indexOf("\"") + 1, contents[1].length() - 1);
+                            fileName = null;
+                        }
+                        temp = i + 2;
+                        pre = i + 2;
+                    } else if (byteCheckStartWith(buffer, temp, i, "Content-Type:".getBytes())) {
+                        pre = i + 4;
+                        temp = i + 4;
+                        i += 4;
+                    } else {
+                        //读取到文件中间，移动temp指针
+                        temp = i + 2;
                     }
-                    temp = i + 2;
-                    pre = i + 2;
-                } else if (str.startsWith("Content-Disposition: form-data;")) {
-
-                    str = new String(buffer, temp, i - temp, Config.CHARSET);
-                    System.out.println("content data " + str);
-
-                    String[] contents = str.split(";");
-                    if (contents.length == 3) {//文件
-                        contentDesposition = contents[0].substring(contents[0].indexOf(":") + 2);
-                        name = contents[1].substring(contents[1].indexOf("\"") + 1, contents[1].length() - 1);
-                        fileName = contents[2].substring(contents[2].indexOf("\"") + 1, contents[2].length() - 1);
-                    } else if (contents.length == 2) {//字符
-                        contentDesposition = contents[0].substring(contents[0].indexOf(":") + 2);
-                        name = contents[1].substring(contents[1].indexOf("\"") + 1, contents[1].length() - 1);
-                        fileName = null;
-                    }
-
-                    System.out.println(contentDesposition);
-                    System.out.println(name);
-                    System.out.println(fileName);
-
-                    temp = i + 2;
-                    pre = i + 2;
-                } else if (str.startsWith("Content-Type:")) {
-                    pre = i + 4;
-                    temp = i + 4;
-                    i += 4;
-                } else {
-                    //读取到文件中间，移动temp指针
-                    temp = i + 2;
                 }
             }
+        } else {
+            //普通的表单
+            String str = new String(buffer, pre, buffer.length - pre);
+            String[] data = str.split("&");
+            for (String s : data) {
+                String key = s.substring(0, s.indexOf("="));
+                String value = s.substring(s.indexOf("=") + 1);
+                request.paramater.put(key, value);
+            }
+            Arrays.stream(data).forEach(System.out::println);
         }
 
-        System.err.println("end of program");
+        if (!request.content_type.equals("multipart/form-data") && request.method.equals("GET")) {
+            String str = request.url.substring(request.url.indexOf("?"));
+            String[] data = str.split("&");
+            for (String s : data) {
+                String key = s.substring(0, s.indexOf("="));
+                String value = s.substring(s.indexOf("=") + 1);
+                request.paramater.put(key, value);
+            }
+            Arrays.stream(data).forEach(System.out::println);
+        } else {
+
+        }
         System.err.println("timer log3 " + (System.currentTimeMillis() - start));
     }
 
-    public String readString(byte[] bytes, int s, int e) {
-        StringBuffer sb = new StringBuffer();
-        for (int i = s; i < e; i++) {
-            sb.append((char) bytes[i]);
+
+    public boolean byteCheckStartWith(byte[] bytes, int start, int end, byte[] stringBytes) {
+        if (end - start < stringBytes.length) {
+            return false;
         }
-        return sb.toString();
+        for (int i = start, j = 0; i < end && j < stringBytes.length; i++, j++) {
+            if (bytes[i] == stringBytes[j]) {
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean byteCheckContains(byte[] bytes, int start, int end, byte[] stringBytes, char ignore) {
+        if (end - start < stringBytes.length) {
+            return false;
+        }
+        for (int i = start, j = 0; i < end && j < stringBytes.length; i++, j++) {
+            if (bytes[i] == ignore) {
+                j--;
+                continue;
+            }
+            if (stringBytes[j] == ignore) {
+                i--;
+                continue;
+            }
+            if (bytes[i] == stringBytes[j]) {
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 }

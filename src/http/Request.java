@@ -9,6 +9,7 @@ public class Request {
     public String method;
     public String url;
     public String protocol;
+    public String pragma;
     public String host;
     public String connection;
     public String upgrade_insecure_requests;
@@ -24,7 +25,9 @@ public class Request {
     public String accept_encoding;
     public String accept_language;
     public String boundary;
+    public String referer;
     public Map<String, String> cookie = new HashMap<>();
+    public Map<String,String> paramater = new HashMap<>();
 
     public Request(List<String> httpHeader) {
         parse(httpHeader);
@@ -39,10 +42,8 @@ public class Request {
         this.protocol = httpHeader.get(0).split(" ")[2];
 
         for (int i = 1; i < httpHeader.size(); i++) {
-            System.out.println(httpHeader.get(i));
             if (httpHeader.get(i).startsWith("Cookie")) {
                 //Cookie的解析方法
-
             } else {
                 String[] data = httpHeader.get(i).split(":[ ]+");
                 try {
@@ -55,8 +56,9 @@ public class Request {
                 }
             }
         }
-        if(this.content_type.contains("multipart/form-data")){
-            boundary=this.content_type.split("boundary=")[1];
+        if (this.content_type.contains("multipart/form-data")) {
+            boundary = this.content_type.substring(content_type.indexOf("=") + 1);
+            content_type = this.content_type.substring(0, content_type.indexOf(";"));
         }
     }
 
@@ -80,6 +82,8 @@ public class Request {
                 ", accept='" + accept + '\'' +
                 ", accept_encoding='" + accept_encoding + '\'' +
                 ", accept_language='" + accept_language + '\'' +
+                ", boundary='" + boundary + '\'' +
+                ", referer='" + referer + '\'' +
                 ", cookie=" + cookie +
                 '}';
     }
