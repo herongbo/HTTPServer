@@ -27,7 +27,7 @@ public class Request {
     public String boundary;
     public String referer;
     public Map<String, String> cookie = new HashMap<>();
-    public Map<String,String> paramater = new HashMap<>();
+    public Map<String, String> paramater = new HashMap<>();
 
     public Request(List<String> httpHeader) {
         parse(httpHeader);
@@ -43,6 +43,9 @@ public class Request {
 
         for (int i = 1; i < httpHeader.size(); i++) {
             if (httpHeader.get(i).startsWith("Cookie")) {
+                System.out.println(httpHeader.get(i));
+                Cookie cookie = new Cookie(httpHeader.get(i));
+                System.out.println(cookie);
                 //Cookie的解析方法
             } else {
                 String[] data = httpHeader.get(i).split(":[ ]+");
@@ -56,7 +59,7 @@ public class Request {
                 }
             }
         }
-        if (this.content_type.contains("multipart/form-data")) {
+        if (this.content_type != null && this.content_type.contains("multipart/form-data")) {
             boundary = this.content_type.substring(content_type.indexOf("=") + 1);
             content_type = this.content_type.substring(0, content_type.indexOf(";"));
         }

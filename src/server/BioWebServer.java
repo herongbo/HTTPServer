@@ -1,11 +1,17 @@
 package server;
 
+import annotation.AnnotationReader;
 import config.Config;
 import http.Request;
+import http.Route;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 import java.util.concurrent.*;
 
 public class BioWebServer implements WebServer {
@@ -29,10 +35,10 @@ public class BioWebServer implements WebServer {
 }
 
 class Client {
-    Request request;
-    Socket socket;
+    Socket socket = null;
     InputStream is = null;
     OutputStream os = null;
+    Request request = null;
 
     public Client(Socket socket) throws IOException {
         System.out.println("a new connection");
@@ -43,12 +49,55 @@ class Client {
     }
 
     public void read() throws IOException {
-        //如果没有表单怎么办？ 如果请求头在循环结束内没有接受完怎么办？
+        //初始化ByteReader，获取请求数据
         ByteReader byteReader = new ByteReader(is);
-        byteReader.read();
+
+        // 获取Request对象
+        Request request = byteReader.read();
+
+        //待实现的路由方法
+
+        AnnotationReader ar = null;
+        try {
+            ar = new AnnotationReader();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String url = request.url;
+        //根据routeMap匹配
+        if (ar.routeMap.containsKey(url)) {
+            System.out.println("http 200 ok");
+            System.out.println("命中" + ar.routeMap.get(url).processMethod);
+            //调用方法
+            Method method = ar.routeMap.get(url).processMethod;
+            Class<?> returnType = method.getReturnType();
+            Parameter[] paramTypes = method.getParameters();
+            for (Parameter parameter : paramTypes) {
+                System.out.println(parameter.getName());
+                System.out.println(parameter.getType());
+            }
+        }
+        //根据routeList，需要直接替换顺序查找？
+        for (Route route : ar.routeList) {
+            if (url.startsWith(route.url.substring(route.url.indexOf("*")))) {
+                System.out.println("http 200 also");
+            }
+        }
+        System.out.println("url: " + url);
+        System.out.println();
+
+
         System.out.println("finished");
         os.write("HTTP/1.1 200 OK\n".getBytes());
-        os.write("<html>Hello world</html>".getBytes());
+        os.write("Content-Type: text/html; ".getBytes());
+        os.write("charset=UTF-8\n\n".getBytes());
+        os.write(("<html>\n<head>hello world</head>\n" +
+                "<body>this is the test page of mycat web server" +
+                new Date()
+                + "</body></html>").getBytes());
+
+        os.flush();
         this.socket.close();
     }
 }
