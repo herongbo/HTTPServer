@@ -5,55 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce544d-c537-4e0d-843b-dceed5433157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/AnnotationReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/Autowared.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/Impl/test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/Qualifier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/RequestMapping.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/RequestMethod.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/RestController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/config/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/httpserver/http/Route.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/AnnotationReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/Autowared.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/Impl/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/Qualifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/RequestMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/RequestMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/RestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/Route.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp/https.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httpserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/META-INF/httpserver.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config/ConfigReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config/ConfigReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/exception/ConfigException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/exception/ConfigException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/run/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/run/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/BioWebServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/BioWebServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ConfigReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exception/ConfigException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/ConfigException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Cookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/run/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/BioWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/BioWebServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ByteReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ByteReader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +202,7 @@
       <workItem from="1570781678472" duration="6154000" />
       <workItem from="1570796891016" duration="8000" />
       <workItem from="1570796919441" duration="69000" />
-      <workItem from="1570797173641" duration="3445000" />
+      <workItem from="1570797173641" duration="3838000" />
     </task>
     <servers />
   </component>
