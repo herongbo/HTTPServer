@@ -1,19 +1,15 @@
-package server;
+package server.impl;
 
-import annotation.AnnotationReader;
 import annotation.DispatchServlet;
 import config.Config;
 import http.Request;
 import http.Response;
-import http.Route;
+import server.ByteReader;
+import server.WebServer;
 
 import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Date;
 import java.util.concurrent.*;
 
 public class BioWebServer implements WebServer {

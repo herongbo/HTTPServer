@@ -24,7 +24,7 @@ public class PageController {
 
 
     @RequestMapping("ssss")
-    public String ssss(Request request, String name, String password) {
+    public String test(Request request, String name, String password) {
         return request.url;
     }
 

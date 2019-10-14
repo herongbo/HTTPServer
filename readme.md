@@ -9,3 +9,5 @@
 - [ ] 必要的注解
 - [ ] Session管理
 - [ ] 表单处理
+Config.static配置静态资源路径
+@RestController注解编写动态页面

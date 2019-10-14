@@ -1,12 +1,11 @@
 package annotation;
 
+import config.Config;
 import http.Request;
 import http.Response;
-import http.Route;
-import http.Servlet;
 
-import java.io.File;
-import java.io.IOException;
+import java.awt.geom.AffineTransform;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -64,10 +63,9 @@ public class DispatchServlet {
     }
 
     /**
-     * 7 Handler Mapping 请求分发
+     * 9 检查Controller
      */
-    public void handlerAdapter(Request request, Response response) {
-        System.out.println("[info 7] handlerAdapter working");
+    public void controllerHandlerAdapter(Request request, Response response) {
         Method method = handlerMapping.get(request.url);
 
         // 获取方法的相关参数
@@ -110,6 +108,44 @@ public class DispatchServlet {
             response.getWriter().flush();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * 8 映射到静态资源文件
+     */
+    public void staticHandlerAdapter(Request request, Response response) throws IOException {
+
+        String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.STATIC).getFile().substring(1);
+        File file = new File(basePath + request.url);
+
+        if (file.exists()) {
+            FileInputStream fis = new FileInputStream(file);
+            byte[] buffer = new byte[1024];
+            int i = 0;
+            response.httpSuccess();
+            while ((i = fis.read(buffer)) > 1) {
+                response.getOutputStream().write(buffer, 0, i);
+            }
+            response.getOutputStream().flush();
+        }
+    }
+
+    /**
+     * 7 Handler Mapping 请求分发
+     */
+    public void handlerAdapter(Request request, Response response) throws IOException {
+        System.out.println("[info 7] handlerAdapter working");
+
+
+        String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.STATIC).getFile().substring(1);
+        if (handlerMapping.containsKey(request.url)) {
+            controllerHandlerAdapter(request, response);
+        } else if (new File(basePath + request.url).exists()) {
+            staticHandlerAdapter(request, response);
+        } else {
+            response.http404();
         }
         System.out.println("[info 7] handlerAdapter end ");
     }

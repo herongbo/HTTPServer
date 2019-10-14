@@ -4,12 +4,13 @@ import java.lang.annotation.*;
 /**
  * <p>
  *
- * @author XiaoPengwei
+ * @author Brian
  * @since 2019-07-19
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface Service {
+@interface Service {
+
     String value() default "";
 }
