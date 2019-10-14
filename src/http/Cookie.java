@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Cookie {
+
     Map<String, String> map = new HashMap<>(10);
 
     public Cookie(String data) {
@@ -15,7 +16,7 @@ public class Cookie {
     /**
      * 从原始数据解析Cookie
      *
-     * @param Cookie字段
+     * @param data
      */
     public void parseCookie(String data) {
         int i = data.indexOf(":");

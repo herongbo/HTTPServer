@@ -41,6 +41,7 @@ public class ByteReader {
     }
 
     public void receiveData() throws IOException {
+        System.err.println("receive data...");
         // 数据总量
         long size = 0;
         // 数据合并到ByteArrayOutputStream
@@ -164,10 +165,13 @@ public class ByteReader {
                     }
                 }
             }
-        } else if (request.content_type == null && request.method.equals("GET")) {
+        } else if (request.content_type == null && request.method.equals("GET") && request.url.contains("?")) {
             // 处理get表单
             System.out.println("getgetget");
             String str = request.url.substring(request.url.indexOf("?") + 1);
+            request.url = request.url.substring(0, request.url.indexOf("?"));
+
+            // 处理get表单
             String[] data = str.split("&");
             for (String s : data) {
                 String key = s.substring(0, s.indexOf("="));
@@ -175,7 +179,7 @@ public class ByteReader {
                 request.paramater.put(key, value);
             }
             Arrays.stream(data).forEach(System.out::println);
-        } else {
+        } else if (request.content_type == null && request.url.contains("?")) {
             //处理post表单
             String str = new String(buffer, pre + 2, buffer.length - pre - 2);
             String[] data = str.split("&");

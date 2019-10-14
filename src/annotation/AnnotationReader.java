@@ -31,7 +31,7 @@ public class AnnotationReader {
     // List映射到通配符
     public List<Route> routeList = new ArrayList<>();
 
-    List<String> packageList = Arrays.asList("controller", "annotation");
+    List<String> packageList = Arrays.asList("controller", "entity");
 
     public AnnotationReader() throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         //扫描package获取所有的class
@@ -58,7 +58,7 @@ public class AnnotationReader {
 
             //Autowared？这里必须同时使用AutoWared和Qualifier，
             for (Field field : fields) {
-                if (field.isAnnotationPresent(Autowared.class) && field.isAnnotationPresent(Qualifier.class)) {
+                if (field.isAnnotationPresent(Autowired.class) && field.isAnnotationPresent(Qualifier.class)) {
                     Qualifier qualifier = field.getAnnotation(Qualifier.class);
                     String name = qualifier.value();
                     field.set(object, Class.forName(name));

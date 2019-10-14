@@ -1,13 +1,16 @@
 package annotation;
 
 import http.Request;
+import http.Response;
 import http.Route;
+import http.Servlet;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.net.URL;
 import java.util.*;
 
@@ -30,19 +33,22 @@ public class DispatchServlet {
      */
     public Map<String, Method> handlerMapping = new HashMap<>();
 
-    public List<Route> handlerList = new ArrayList<>();
-
     /**
      * debug 测试数据
      */
-    List<String> packageList = Arrays.asList("controller", "annotation");
+    List<String> packageList = Arrays.asList("controller", "entity");
+
+    public DispatchServlet() {
+        init();
+    }
 
     public void init() {
         // 1、加载配置文件
         doLoadConfig();
 
         // 2、扫描需要管理的类
-        doScanner("annotation");
+        doScanner("entity");
+        doScanner("controller");
 
         // 3、初始化IOC容器，将所有相关的类保存到IOC容器中
         doInstance();
@@ -55,6 +61,57 @@ public class DispatchServlet {
 
         // 6、打印数据
         doTestPrintData();
+    }
+
+    /**
+     * 7 Handler Mapping 请求分发
+     */
+    public void handlerAdapter(Request request, Response response) {
+        System.out.println("[info 7] handlerAdapter working");
+        Method method = handlerMapping.get(request.url);
+
+        // 获取方法的相关参数
+        String className = method.getDeclaringClass().getName();
+        Object object = iocMap.get(className);
+        Class<?> returnType = method.getReturnType();
+        Parameter[] parameters = method.getParameters();
+
+        // 根据参数类型生成参数
+        Object[] parametersValue = new Object[parameters.length];
+        for (int i = 0; i < parameters.length; i++) {
+            Parameter parameter = parameters[i];
+            // 判断是否是request
+            if (parameter.getType() == Request.class) {
+                parametersValue[i] = request;
+            } else {
+                //当成表单内容解析
+                String data = request.paramater.get(parameter.getName());
+                parametersValue[i] = data;
+            }
+        }
+
+        // 通过反射调用方法
+        System.out.println(className);
+        System.out.println(object);
+        String data = null;
+        try {
+            data = (String) method.invoke(object, parametersValue);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+
+        // 数据写入到流中
+        response.httpSuccess();
+        try {
+            response.getWriter().write(data);
+            response.getWriter().flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("[info 7] handlerAdapter end ");
     }
 
     /**
@@ -98,7 +155,7 @@ public class DispatchServlet {
         for (Map.Entry<String, Object> entry : iocMap.entrySet()) {
             Class<?> clazz = entry.getValue().getClass();
 
-            if (!clazz.isAnnotationPresent(Controller.class)) {
+            if (!clazz.isAnnotationPresent(Controller.class) && !clazz.isAnnotationPresent(RestController.class)) {
                 continue;
             }
 
@@ -138,7 +195,8 @@ public class DispatchServlet {
             Field[] fields = entry.getValue().getClass().getDeclaredFields();
 
             for (Field field : fields) {
-                if (!field.isAnnotationPresent(Autowared.class)) {
+                // 判断字段是否使用Autowired注解
+                if (!field.isAnnotationPresent(Autowired.class)) {
                     continue;
                 }
 
@@ -147,13 +205,15 @@ public class DispatchServlet {
                 // 获取注解对应的类
                 // 分成两种情况，如果有qualifier注解，把注解中的内容当成beanname
                 // 否则，把类名当成beanName ， 然后从Map中找到指定的类
-                Qualifier qualifier = field.getAnnotation(Qualifier.class);
-                String beanName = qualifier.value();
-
-                if ("".equals(beanName)) {
-                    System.out.println("[INFO] xAutowired.value() is null");
+                String beanName;
+                if (field.isAnnotationPresent(Qualifier.class)) {
+                    Qualifier qualifier = field.getAnnotation(Qualifier.class);
+                    beanName = qualifier.value();
+                } else {
+                    System.out.println("[INFO] field is not present by Qualifier ");
                     beanName = field.getType().getName();
                 }
+                System.out.println("[INFO] bean name: " + beanName);
 
                 //只要加了注解，都要加载，不管是private还是public
                 field.setAccessible(true);
@@ -182,11 +242,14 @@ public class DispatchServlet {
                 Class<?> clazz = Class.forName(className);
 
                 if (clazz.isAnnotationPresent(Controller.class) || clazz.isAnnotationPresent(RestController.class)) {
-                    String beanName = clazz.getSimpleName().toLowerCase();
+                    // 短类名必须重构
+                    String simpleBeanName = clazz.getSimpleName().toLowerCase();
+                    String beanName = clazz.getName();
                     Object instance = clazz.getDeclaredConstructor().newInstance();
 
-                    // 保存到ioc容器
+                    // 保存到ioc容器？两个类持有一个对象
                     iocMap.put(beanName, instance);
+                    iocMap.put(simpleBeanName, instance);
                     System.out.println("[INFO-3] {" + beanName + "} has been saved in iocMap.");
 
                 } else if (clazz.isAnnotationPresent(Service.class)) {

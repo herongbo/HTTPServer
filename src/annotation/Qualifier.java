@@ -7,5 +7,5 @@ import java.lang.annotation.*;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @interface Qualifier {
-    String value();
+    String value() default "";
 }

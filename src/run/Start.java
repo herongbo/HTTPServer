@@ -1,6 +1,7 @@
 package run;
 
 import annotation.AnnotationReader;
+import annotation.DispatchServlet;
 import config.ConfigReader;
 import server.BioWebServer;
 import server.WebServer;
@@ -14,8 +15,9 @@ public class Start {
         //读取配置文件
         ConfigReader configReader = new ConfigReader();
 
-        AnnotationReader annoationReader = new AnnotationReader();
+        DispatchServlet dispatchServlet = new DispatchServlet();
+        System.out.println("dispatcherservlet " + dispatchServlet);
 
-        WebServer server = new BioWebServer();
+        WebServer server = new BioWebServer(dispatchServlet);
     }
 }

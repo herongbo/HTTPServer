@@ -5,8 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce544d-c537-4e0d-843b-dceed5433157" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/Servlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/AnnotationReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/AnnotationReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/Autowared.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/Impl/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/Qualifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/Qualifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/run/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/run/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/BioWebServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/BioWebServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/upload_temp/100721241685.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/upload_temp/3b5d9eaa6b80cf4983b709a28662975c_r.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/upload_temp/7zippojie.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/upload_temp/XunLeiWebSetup10.1.22.558dl.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/upload_temp/crark7z-11.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/upload_temp/crark7z-20.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/upload_temp/file_id.diz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/AnnotationReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/AnnotationReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/Autowared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/Autowired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/Impl/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/Qualifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/Qualifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Cookie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/run/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/run/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/BioWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/BioWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ByteReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ByteReader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,43 +55,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>------------------------</find>
-      <find>b</find>
-      <find>14457291615441</find>
-      <find>---------------------------14457291615441</find>
-      <find>merge</find>
-      <find>timer log3</find>
-      <find>save</find>
-      <find>�u�l�TE����J1��C�@~�懅</find>
-      <find>request size</find>
-      <find>request si</find>
-      <find>size</find>
-      <find>file</find>
-      <find>wait for upload</find>
-      <find>true</find>
-      <find>boundary</find>
-      <find>boundary!!</find>
-      <find>LOG1</find>
-      <find>WebKitFormBoundaryZT</find>
-      <find>----WebKitFormBoundaryrHQw1tazVeC1rfZ3</find>
-      <find>-WeBKitFormboundary</find>
-      <find>init</find>
-      <find>processing</find>
-      <find>reques</find>
-      <find>request</find>
-      <find>String(buffer</find>
-      <find>content</find>
-      <find>100</find>
-      <find>命中</find>
-      <find>3nnnnnnnnnnnnnnnnnnnnnn</find>
-      <find>handlerMapping</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>readString</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,18 +78,18 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="annotation" />
       <recent name="annoation" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\utils" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,7 +132,7 @@
       </method>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="config.Test" />
+      <option name="MAIN_CLASS_NAME" value="annotation.Test" />
       <module name="httpserver" />
       <extension name="coverage">
         <pattern>
@@ -203,7 +199,8 @@
       <workItem from="1570781678472" duration="6154000" />
       <workItem from="1570796891016" duration="8000" />
       <workItem from="1570796919441" duration="69000" />
-      <workItem from="1570797173641" duration="4472000" />
+      <workItem from="1570797173641" duration="4658000" />
+      <workItem from="1570845341425" duration="19724000" />
     </task>
     <servers />
   </component>
