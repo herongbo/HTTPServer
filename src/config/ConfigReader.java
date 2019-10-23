@@ -118,5 +118,11 @@ public class ConfigReader {
             System.err.println("invalid max-connections");
             System.err.println(-1);
         }
+        if (Config.STATIC.startsWith("/")) {
+            Config.STATIC = Config.STATIC.substring(1);
+        }
+        if (Config.VIEW_PERFIX.startsWith("/")) {
+            Config.VIEW_PERFIX = Config.VIEW_PERFIX.substring(1);
+        }
     }
 }

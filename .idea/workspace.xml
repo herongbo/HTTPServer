@@ -5,60 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce544d-c537-4e0d-843b-dceed5433157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap-switch.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap-switch.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/html/NewFile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/html/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/html/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/img/login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/index.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/bootstrap-switch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/template/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/template/poem.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/AnnotationReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/META-INF/httpserver.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/Service.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config/ConfigReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config/ConfigReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Route.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Servlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/run/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/run/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/BioWebServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/annotation/AnnotationReader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/annotation/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ConfigReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Route.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Servlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/run/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/BioWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/impl/BioWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/impl/BioWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/impl/BioWebServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,7 +65,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569494633568" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/template" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -98,16 +81,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\html" />
-      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\utils" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
       <recent name="annotation" />
       <recent name="annoation" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\template" />
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\html" />
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -218,8 +203,22 @@
       <workItem from="1570796891016" duration="8000" />
       <workItem from="1570796919441" duration="69000" />
       <workItem from="1570797173641" duration="4658000" />
-      <workItem from="1570845341425" duration="26218000" />
+      <workItem from="1570845341425" duration="26893000" />
+      <workItem from="1571102866098" duration="138000" />
+      <workItem from="1571103383000" duration="596000" />
+      <workItem from="1571120014396" duration="883000" />
+      <workItem from="1571126756987" duration="1204000" />
+      <workItem from="1571188404492" duration="678000" />
+      <workItem from="1571794267433" duration="3662000" />
     </task>
+    <task id="LOCAL-00001" summary="静态文件mapping 和 ControllerMapping">
+      <created>1571058753637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571058753637</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,5 +253,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="静态文件mapping 和 ControllerMapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="静态文件mapping 和 ControllerMapping" />
   </component>
 </project>

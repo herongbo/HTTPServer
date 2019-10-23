@@ -63,9 +63,9 @@ public class DispatchServlet {
     }
 
     /**
-     * 9 检查Controller
+     * 10 RestController
      */
-    public void controllerHandlerAdapter(Request request, Response response) {
+    private void restControllerHandlerAdapter(Request request, Response response) {
         Method method = handlerMapping.get(request.url);
 
         // 获取方法的相关参数
@@ -109,13 +109,74 @@ public class DispatchServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    /**
+     * 9 检查Controller
+     */
+    public void controllerHandlerAdapter(Request request, Response response) throws IOException {
+        Method method = handlerMapping.get(request.url);
+
+        // 获取方法的相关参数
+        String className = method.getDeclaringClass().getName();
+        Object object = iocMap.get(className);
+        Class<?> returnType = method.getReturnType();
+        Parameter[] parameters = method.getParameters();
+
+        // 根据参数类型生成参数
+        Object[] parametersValue = new Object[parameters.length];
+        for (int i = 0; i < parameters.length; i++) {
+            Parameter parameter = parameters[i];
+            // 判断是否是request
+            if (parameter.getType() == Request.class) {
+                parametersValue[i] = request;
+            } else {
+                //当成表单内容解析
+                String data = request.paramater.get(parameter.getName());
+                parametersValue[i] = data;
+            }
+        }
+
+        // 通过反射调用方法
+        System.out.println(className);
+        System.out.println(object);
+        String data = null;
+        try {
+            data = (String) method.invoke(object, parametersValue);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        String view = data;
+        String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.VIEW_PERFIX).getFile().substring(1);
+        File file = new File(basePath + File.separator + view + Config.VIEW_SUFFIX);
+
+        System.err.println(file.getAbsolutePath());
+        if (file.exists()) {
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String str = "";
+            StringBuffer sb = new StringBuffer();
+            while ((str = bufferedReader.readLine()) != null) {
+                sb.append(str);
+            }
+            String codes = sb.toString();
+            response.httpSuccess();
+            response.getWriter().write(codes);
+            response.getWriter().flush();
+        } else {
+            response.http404();
+        }
     }
 
     /**
      * 8 映射到静态资源文件
      */
     public void staticHandlerAdapter(Request request, Response response) throws IOException {
+
+        System.err.println(Config.STATIC);
 
         String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.STATIC).getFile().substring(1);
         File file = new File(basePath + request.url);
@@ -141,7 +202,11 @@ public class DispatchServlet {
 
         String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.STATIC).getFile().substring(1);
         if (handlerMapping.containsKey(request.url)) {
-            controllerHandlerAdapter(request, response);
+            if (handlerMapping.get(request.url).getDeclaringClass().isAnnotationPresent(Controller.class)) {
+                controllerHandlerAdapter(request, response);
+            } else if (handlerMapping.get(request.url).getDeclaringClass().isAnnotationPresent(RestController.class)) {
+                restControllerHandlerAdapter(request, response);
+            }
         } else if (new File(basePath + request.url).exists()) {
             staticHandlerAdapter(request, response);
         } else {
@@ -149,6 +214,7 @@ public class DispatchServlet {
         }
         System.out.println("[info 7] handlerAdapter end ");
     }
+
 
     /**
      * 6、打印数据

@@ -63,7 +63,6 @@ class Client {
 
         // 请求分发
         System.out.println("请求分发");
-
         dispatchServlet.handlerAdapter(request, response);
 
         os.flush();

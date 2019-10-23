@@ -1,7 +1,7 @@
 package config;
 
 public class Config {
-    public static int PORT = 8080;
+    public static int PORT = 8081;
     public static int SESSION_TIMEOUT = 60;
     public static int MAX_CONNECTIONS = 1500;
     public static int MAX_THREAD = 50;
