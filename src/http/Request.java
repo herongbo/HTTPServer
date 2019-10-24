@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public class Request {
     public String method;
@@ -26,7 +27,8 @@ public class Request {
     public String accept_language;
     public String boundary;
     public String referer;
-    public Map<String, String> cookie = new HashMap<>();
+    public Cookie cookie = null;
+    public HttpSession session;
     public Map<String, String> paramater = new HashMap<>();
 
     public Request(List<String> httpHeader) {
@@ -45,8 +47,11 @@ public class Request {
             if (httpHeader.get(i).startsWith("Cookie")) {
                 System.out.println(httpHeader.get(i));
                 Cookie cookie = new Cookie(httpHeader.get(i));
-                System.out.println(cookie);
+                this.cookie = cookie;
+
                 //Cookie的解析方法
+                session = SessionContext.getSession(cookie.map.get("JSESSIONID"));
+
             } else {
                 String[] data = httpHeader.get(i).split(":[ ]+");
                 try {
@@ -71,6 +76,7 @@ public class Request {
                 "method='" + method + '\'' +
                 ", url='" + url + '\'' +
                 ", protocol='" + protocol + '\'' +
+                ", pragma='" + pragma + '\'' +
                 ", host='" + host + '\'' +
                 ", connection='" + connection + '\'' +
                 ", upgrade_insecure_requests='" + upgrade_insecure_requests + '\'' +
@@ -87,7 +93,8 @@ public class Request {
                 ", accept_language='" + accept_language + '\'' +
                 ", boundary='" + boundary + '\'' +
                 ", referer='" + referer + '\'' +
-                ", cookie=" + cookie +
+                ", cookie=" + cookie.toString() +
+                ", paramater=" + paramater +
                 '}';
     }
 }

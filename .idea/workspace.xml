@@ -5,23 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce544d-c537-4e0d-843b-dceed5433157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/template/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/template/poem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/SessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/template/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/META-INF/httpserver.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config/ConfigReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config/ConfigReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Session.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ConfigReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/impl/BioWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/impl/BioWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Cookie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/HttpSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ByteReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ByteReader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +50,7 @@
         <option value="AnnotationType" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -61,11 +63,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569494633568" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/template" />
+    <property name="last_opened_file_path" value="C:/coding/reader/src/main/java/com/example/reader" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -209,7 +212,9 @@
       <workItem from="1571120014396" duration="883000" />
       <workItem from="1571126756987" duration="1204000" />
       <workItem from="1571188404492" duration="678000" />
-      <workItem from="1571794267433" duration="3662000" />
+      <workItem from="1571794267433" duration="4746000" />
+      <workItem from="1571895851830" duration="4209000" />
+      <workItem from="1571914442965" duration="9013000" />
     </task>
     <task id="LOCAL-00001" summary="静态文件mapping 和 ControllerMapping">
       <created>1571058753637</created>

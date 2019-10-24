@@ -1,10 +1,11 @@
 package annotation;
 
 import config.Config;
+import http.HttpSession;
 import http.Request;
 import http.Response;
+import http.SessionContext;
 
-import java.awt.geom.AffineTransform;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -81,6 +82,16 @@ public class DispatchServlet {
             // 判断是否是request
             if (parameter.getType() == Request.class) {
                 parametersValue[i] = request;
+            } else if (parameter.getType() == HttpSession.class) {
+                // 设置新的session
+                if (request.session == null) {
+                    String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+                    System.out.println("[uuid] --- " + uuid);
+                    request.session = new HttpSession(uuid);
+                    SessionContext.setSession(uuid, request.session);
+                    response.setCookie("JSESSIONID", request.session.getId());
+                }
+                parametersValue[i] = request.session;
             } else {
                 //当成表单内容解析
                 String data = request.paramater.get(parameter.getName());
@@ -102,8 +113,9 @@ public class DispatchServlet {
 
 
         // 数据写入到流中
-        response.httpSuccess();
+        response.httpSuccessHtml();
         try {
+            System.out.println(data);
             response.getWriter().write(data);
             response.getWriter().flush();
         } catch (IOException e) {
@@ -143,10 +155,10 @@ public class DispatchServlet {
         String data = null;
         try {
             data = (String) method.invoke(object, parametersValue);
-        } catch (IllegalAccessException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
+            response.http500();
+            return;
         }
 
         String view = data;
@@ -161,9 +173,10 @@ public class DispatchServlet {
             StringBuffer sb = new StringBuffer();
             while ((str = bufferedReader.readLine()) != null) {
                 sb.append(str);
+                sb.append("\n");
             }
             String codes = sb.toString();
-            response.httpSuccess();
+            response.httpSuccessHtml();
             response.getWriter().write(codes);
             response.getWriter().flush();
         } else {

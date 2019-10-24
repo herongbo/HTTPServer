@@ -49,7 +49,7 @@ public class Cookie {
     @Override
     public String toString() {
         List<String> data = new ArrayList<>();
-        map.entrySet().forEach(e -> data.add(e.getKey() + " : " + e.getValue()));
+        map.entrySet().forEach(e -> data.add(e.getKey() + " = " + e.getValue()));
         return data.toString();
     }
 }

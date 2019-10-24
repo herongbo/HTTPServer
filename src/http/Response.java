@@ -9,6 +9,8 @@ import config.Config;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.time.chrono.HijrahDate;
+import java.util.Date;
 
 /*
 考虑一下总体的逻辑，先收到请求
@@ -32,7 +34,13 @@ public class Response {
             + "<hr style='height:1px;border:none;border-top:1px solid #0066CC;' /> <br> "
             + "<label>Mini web Server</label><center><html>";
 
-    public static String Http_success = "\"HTTP/1.1 200 OK\\n" + "charset=" + Config.CHARSET + "\n\n";
+    public static String Http_200_Html = "HTTP/1.1 200 OK\r\n" + "Content-Type: text/html; charset=" + Config.CHARSET + "\r\n";
+
+    public static String Http_200 = "HTTP/1.1 200 OK\r\n" + "charset=" + Config.CHARSET + "\r\n";
+
+    public static String Header_end = "\r\n";
+
+    public static String Header_extra = "";
 
     public Response(OutputStream os) {
         this.writer = new OutputStreamWriter(os);
@@ -47,9 +55,31 @@ public class Response {
         return outputStream;
     }
 
+    public void setCookie(String key, String value) {
+        Date date = new Date();
+        date.setTime(date.getTime() + 1000 * 3600);
+        String str = "Set-Cookie: " + key + "=" + value + "; Expires=" + date.toString() + "; Path=/\n";
+        Header_extra += str;
+    }
+
+    public void httpSuccessHtml() {
+        try {
+            System.out.println(Http_200_Html + Header_extra + Header_end);
+            writer.write(Http_200_Html);
+            writer.write(Header_extra);
+            writer.write(Header_end);
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void httpSuccess() {
         try {
-            writer.write(Http_success);
+            System.out.println(Http_200 + Header_extra + Header_end);
+            writer.write(Http_200);
+            writer.write(Header_extra);
+            writer.write(Header_end);
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();

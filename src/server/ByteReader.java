@@ -167,7 +167,6 @@ public class ByteReader {
             }
         } else if (request.content_type == null && request.method.equals("GET") && request.url.contains("?")) {
             // 处理get表单
-            System.out.println("getgetget");
             String str = request.url.substring(request.url.indexOf("?") + 1);
             request.url = request.url.substring(0, request.url.indexOf("?"));
 
@@ -179,8 +178,9 @@ public class ByteReader {
                 request.paramater.put(key, value);
             }
             Arrays.stream(data).forEach(System.out::println);
-        } else if (request.content_type == null && request.url.contains("?")) {
+        } else if (request.content_type != null && request.content_type.equals("application/x-www-form-urlencoded")) {
             //处理post表单
+            System.out.println("post表单");
             String str = new String(buffer, pre + 2, buffer.length - pre - 2);
             String[] data = str.split("&");
 

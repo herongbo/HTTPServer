@@ -12,8 +12,14 @@ public class PageController {
     @Autowired
     Book book;
 
-    @RequestMapping("/git")
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping("error")
     public String error() {
-        return ("hello");
+        int a = 2 / 0;
+        return "login";
     }
 }
