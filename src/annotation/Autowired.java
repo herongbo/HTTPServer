@@ -10,5 +10,5 @@ import java.lang.annotation.*;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Autowired {
-    // 作用在字段上
+
 }

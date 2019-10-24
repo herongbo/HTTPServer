@@ -20,6 +20,9 @@ import java.util.*;
  */
 public class DispatchServlet {
 
+    /**
+     * 受管理的class
+     */
     private List<String> classNameList = new ArrayList<>();
 
     /**
@@ -28,8 +31,7 @@ public class DispatchServlet {
     private Map<String, Object> iocMap = new HashMap<>();
 
     /**
-     * route map 映射到普通url
-     * route List映射到通配符的url
+     * url 映射到方法
      */
     public Map<String, Method> handlerMapping = new HashMap<>();
 
@@ -42,6 +44,7 @@ public class DispatchServlet {
         init();
     }
 
+    // 初始化阶段
     public void init() {
         // 1、加载配置文件
         doLoadConfig();
@@ -64,9 +67,9 @@ public class DispatchServlet {
     }
 
     /**
-     * 10 RestController
+     * 11 通过反射调用Controller方法
      */
-    private void restControllerHandlerAdapter(Request request, Response response) {
+    private String executeMethods(Request request, Response response) {
         Method method = handlerMapping.get(request.url);
 
         // 获取方法的相关参数
@@ -110,110 +113,87 @@ public class DispatchServlet {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+        return data;
+    }
 
+    /**
+     * 10 RestController
+     */
+    private void restControllerHandlerAdapter(Request request, Response response) throws IOException {
+
+        String data = executeMethods(request, response);
 
         // 数据写入到流中
         response.httpSuccessHtml();
-        try {
-            System.out.println(data);
-            response.getWriter().write(data);
-            response.getWriter().flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        response.getWriter().write(data);
+        response.getWriter().flush();
     }
 
     /**
      * 9 检查Controller
      */
     public void controllerHandlerAdapter(Request request, Response response) throws IOException {
-        Method method = handlerMapping.get(request.url);
+        System.out.println("[info 9]----controllerHandlerAdapter working------------");
 
-        // 获取方法的相关参数
-        String className = method.getDeclaringClass().getName();
-        Object object = iocMap.get(className);
-        Class<?> returnType = method.getReturnType();
-        Parameter[] parameters = method.getParameters();
+        String view = executeMethods(request, response);
 
-        // 根据参数类型生成参数
-        Object[] parametersValue = new Object[parameters.length];
-        for (int i = 0; i < parameters.length; i++) {
-            Parameter parameter = parameters[i];
-            // 判断是否是request
-            if (parameter.getType() == Request.class) {
-                parametersValue[i] = request;
-            } else {
-                //当成表单内容解析
-                String data = request.paramater.get(parameter.getName());
-                parametersValue[i] = data;
-            }
-        }
-
-        // 通过反射调用方法
-        System.out.println(className);
-        System.out.println(object);
-        String data = null;
-        try {
-            data = (String) method.invoke(object, parametersValue);
-        } catch (Exception e) {
-            e.printStackTrace();
-            response.http500();
-            return;
-        }
-
-        String view = data;
         String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.VIEW_PERFIX).getFile().substring(1);
         File file = new File(basePath + File.separator + view + Config.VIEW_SUFFIX);
 
-        System.err.println(file.getAbsolutePath());
         if (file.exists()) {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String str = "";
+
+            String str;
             StringBuffer sb = new StringBuffer();
             while ((str = bufferedReader.readLine()) != null) {
-                sb.append(str);
-                sb.append("\n");
+                sb.append(str).append("\n");
             }
             String codes = sb.toString();
+
             response.httpSuccessHtml();
             response.getWriter().write(codes);
             response.getWriter().flush();
         } else {
             response.http404();
         }
+
+        System.out.println("[info 9]----controllerHandlerAdapter end------------");
     }
 
     /**
      * 8 映射到静态资源文件
      */
     public void staticHandlerAdapter(Request request, Response response) throws IOException {
-
-        System.err.println(Config.STATIC);
+        System.out.println("[info 8]----staticHandlerAdapter working------------");
 
         String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.STATIC).getFile().substring(1);
+
         File file = new File(basePath + request.url);
 
         if (file.exists()) {
             FileInputStream fis = new FileInputStream(file);
             byte[] buffer = new byte[1024];
-            int i = 0;
+            int i;
             response.httpSuccess();
             while ((i = fis.read(buffer)) > 1) {
                 response.getOutputStream().write(buffer, 0, i);
             }
             response.getOutputStream().flush();
         }
+        System.out.println("[info 8]----staticHandlerAdapter end----------");
     }
 
     /**
      * 7 Handler Mapping 请求分发
      */
     public void handlerAdapter(Request request, Response response) throws IOException {
-        System.out.println("[info 7] handlerAdapter working");
-
+        System.out.println("[info 7]----handlerAdapter working------------");
 
         String basePath = Thread.currentThread().getContextClassLoader().getResource(Config.STATIC).getFile().substring(1);
+
+        // 检查Controller
         if (handlerMapping.containsKey(request.url)) {
             if (handlerMapping.get(request.url).getDeclaringClass().isAnnotationPresent(Controller.class)) {
                 controllerHandlerAdapter(request, response);
@@ -221,11 +201,13 @@ public class DispatchServlet {
                 restControllerHandlerAdapter(request, response);
             }
         } else if (new File(basePath + request.url).exists()) {
+            // 检查静态资源
             staticHandlerAdapter(request, response);
         } else {
+            // 返回404状态码
             response.http404();
         }
-        System.out.println("[info 7] handlerAdapter end ");
+        System.out.println("[info 7]----handlerAdapter end---------");
     }
 
 

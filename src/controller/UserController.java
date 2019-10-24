@@ -1,6 +1,5 @@
 package controller;
 
-
 import annotation.Autowired;
 import annotation.Controller;
 import annotation.RequestMapping;
@@ -67,9 +66,9 @@ public class UserController {
         }
     }
 
-    @RequestMapping("ssss")
+    @RequestMapping("/")
     public String test(Request request, String name, String password) {
-        return request.url;
+        return this.index(name, password, null);
     }
 
     @RequestMapping("/index.html")

@@ -51,7 +51,10 @@ class Client {
         this.os = socket.getOutputStream();
         this.dispatchServlet = dispatchServlet;
         this.response = new Response(os);
-        read();
+        while (true)
+        {
+            read();
+        }
     }
 
     public void read() throws IOException {

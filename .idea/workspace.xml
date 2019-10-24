@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce544d-c537-4e0d-843b-dceed5433157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/http/SessionContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/template/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Cookie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/http/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/http/Session.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/Autowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/Autowired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Cookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/HttpSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ByteReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ByteReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/impl/BioWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/impl/BioWebServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +206,7 @@
       <workItem from="1571188404492" duration="678000" />
       <workItem from="1571794267433" duration="4746000" />
       <workItem from="1571895851830" duration="4209000" />
-      <workItem from="1571914442965" duration="9013000" />
+      <workItem from="1571914442965" duration="10870000" />
     </task>
     <task id="LOCAL-00001" summary="静态文件mapping 和 ControllerMapping">
       <created>1571058753637</created>
