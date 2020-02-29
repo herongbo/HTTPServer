@@ -5,92 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce544d-c537-4e0d-843b-dceed5433157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_44.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/page1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/DBConnect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/img/atom.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/img/bigdata.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/jquery/jquery-1.10.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/jquery/jquery.cxselect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/jquery/jquery.cxselect.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/city-picker.data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/html/js/city-picker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/httpserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-switch.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-switch.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/html/NewFile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/html/simple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/html/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/index.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-datetimepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-datetimepicker.zh-CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-switch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/httpserver/template/poem.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-switch.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-switch.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/html/NewFile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/html/simple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/html/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/index.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/hello.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.zh-CN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-switch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ByteReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ByteReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/poem.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +222,7 @@
       <workItem from="1578622274072" duration="2715000" />
       <workItem from="1581168947208" duration="2077000" />
       <workItem from="1581741531255" duration="122000" />
-      <workItem from="1582974659897" duration="5479000" />
+      <workItem from="1582974659897" duration="5806000" />
     </task>
     <task id="LOCAL-00001" summary="静态文件mapping 和 ControllerMapping">
       <created>1571058753637</created>
