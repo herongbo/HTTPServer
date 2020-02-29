@@ -111,7 +111,18 @@ public class DispatchServlet {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
-            e.printStackTrace();
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            System.out.println(sw.toString());
+            // 打印错误信息
+            try {
+                response.http500();
+                response.getWriter().write(sw.toString());
+                response.getWriter().flush();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
         return data;
     }

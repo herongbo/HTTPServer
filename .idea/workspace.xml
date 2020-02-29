@@ -5,10 +5,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce544d-c537-4e0d-843b-dceed5433157" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_44.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/page1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/DBConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/bootstrap/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/img/atom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/img/bigdata.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/jquery/jquery-1.10.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/jquery/jquery.cxselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/jquery/jquery.cxselect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/js/city-picker.data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html/js/city-picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/httpserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/httpserver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/annotation/DispatchServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-switch.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-switch.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/html/NewFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/html/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/html/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/index.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-datetimepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-datetimepicker.zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap-switch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/html/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/httpserver/server/ByteReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/httpserver/template/poem.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation/DispatchServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-switch.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-switch.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/html/NewFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/html/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/html/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/index.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-datetimepicker.zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-datetimepicker.zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap-switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ByteReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ByteReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/poem.html" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +111,12 @@
     <expand />
     <select />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideInfoMessages" value="true" />
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+    <option name="HIDE_INFO_MESSAGES" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -45,6 +134,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -52,7 +146,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569494633568" />
-    <property name="last_opened_file_path" value="C:/coding/reader/src/main/java/com/example/reader" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,7 +155,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -69,6 +163,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\img" />
       <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -77,22 +172,12 @@
       <recent name="annoation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\template" />
       <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\html" />
-      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\utils" />
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\html\img" />
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\template" />
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src" />
+      <recent name="C:\Users\JDUSER\Desktop\playing\httpserver\src\controller" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Start">
     <configuration name="ConfigReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -147,6 +232,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -200,6 +297,17 @@
       <workItem from="1571895851830" duration="4209000" />
       <workItem from="1571914442965" duration="10870000" />
       <workItem from="1571925445626" duration="386000" />
+      <workItem from="1571925977849" duration="2108000" />
+      <workItem from="1572225928212" duration="2877000" />
+      <workItem from="1572252912606" duration="4056000" />
+      <workItem from="1572595254010" duration="1197000" />
+      <workItem from="1572678121131" duration="954000" />
+      <workItem from="1572918777917" duration="661000" />
+      <workItem from="1578125437751" duration="3478000" />
+      <workItem from="1578622274072" duration="2715000" />
+      <workItem from="1581168947208" duration="2077000" />
+      <workItem from="1581741531255" duration="122000" />
+      <workItem from="1582974659897" duration="5479000" />
     </task>
     <task id="LOCAL-00001" summary="静态文件mapping 和 ControllerMapping">
       <created>1571058753637</created>
@@ -245,5 +353,65 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="静态文件mapping 和 ControllerMapping" />
     <option name="LAST_COMMIT_MESSAGE" value="静态文件mapping 和 ControllerMapping" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="474" y="129" key="FileChooserDialogImpl" timestamp="1581741649544">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state x="474" y="129" key="FileChooserDialogImpl/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1581741649544" />
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom" timestamp="1582984998489">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state width="1344" height="135" key="GridCell.Tab.0.bottom/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1582984998489" />
+    <state width="671" height="134" key="GridCell.Tab.0.bottom/1920.0.1386.750/0.0.1386.750@1920.0.1386.750" timestamp="1581405219587" />
+    <state width="710" height="145" key="GridCell.Tab.0.bottom/2560.0.1280.685/0.0.1463.793@0.0.1463.793" timestamp="1578628882067" />
+    <state width="1344" height="135" key="GridCell.Tab.0.center" timestamp="1582984998489">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state width="1344" height="135" key="GridCell.Tab.0.center/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1582984998489" />
+    <state width="671" height="134" key="GridCell.Tab.0.center/1920.0.1386.750/0.0.1386.750@1920.0.1386.750" timestamp="1581405219587" />
+    <state width="710" height="145" key="GridCell.Tab.0.center/2560.0.1280.685/0.0.1463.793@0.0.1463.793" timestamp="1578628882067" />
+    <state width="1344" height="135" key="GridCell.Tab.0.left" timestamp="1582984998489">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state width="1344" height="135" key="GridCell.Tab.0.left/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1582984998489" />
+    <state width="671" height="134" key="GridCell.Tab.0.left/1920.0.1386.750/0.0.1386.750@1920.0.1386.750" timestamp="1581405219587" />
+    <state width="710" height="145" key="GridCell.Tab.0.left/2560.0.1280.685/0.0.1463.793@0.0.1463.793" timestamp="1578628882067" />
+    <state width="1344" height="135" key="GridCell.Tab.0.right" timestamp="1582984998489">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state width="1344" height="135" key="GridCell.Tab.0.right/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1582984998489" />
+    <state width="671" height="134" key="GridCell.Tab.0.right/1920.0.1386.750/0.0.1386.750@1920.0.1386.750" timestamp="1581405219587" />
+    <state width="710" height="145" key="GridCell.Tab.0.right/2560.0.1280.685/0.0.1463.793@0.0.1463.793" timestamp="1578628882067" />
+    <state x="174" y="0" key="SettingsEditor" timestamp="1582975232842">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state x="174" y="0" key="SettingsEditor/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1582975232842" />
+    <state x="343" y="203" key="com.intellij.ide.util.TipDialog" timestamp="1581741531283">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state x="343" y="203" key="com.intellij.ide.util.TipDialog/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1581741531283" />
+    <state x="388" y="0" width="646" height="807" key="find.popup" timestamp="1582983867993">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state x="388" y="0" width="646" height="807" key="find.popup/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1582983867993" />
+    <state x="410" y="129" width="642" height="534" key="find.popup/2560.0.1280.685/0.0.1463.793@0.0.1463.793" timestamp="1578295691171" />
+    <state x="373" y="108" width="672" height="642" key="search.everywhere.popup" timestamp="1582983866141">
+      <screen x="0" y="0" width="1386" height="750" />
+    </state>
+    <state x="373" y="108" width="672" height="642" key="search.everywhere.popup/1920.0.1386.750/0.0.1386.750@0.0.1386.750" timestamp="1582983866141" />
+    <state x="394" y="114" width="672" height="678" key="search.everywhere.popup/2560.0.1280.685/0.0.1463.793@0.0.1463.793" timestamp="1578296341066" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/template/index.html</url>
+          <line>103</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

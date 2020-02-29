@@ -178,7 +178,7 @@ public class ByteReader {
                 request.paramater.put(key, value);
             }
             Arrays.stream(data).forEach(System.out::println);
-        } else if (request.content_type != null && request.content_type.equals("application/x-www-form-urlencoded")) {
+        } else if (request.content_type != null && request.content_type.startsWith("application/x-www-form-urlencoded")) {
             //处理post表单
             System.out.println("post表单");
             String str = new String(buffer, pre + 2, buffer.length - pre - 2);
