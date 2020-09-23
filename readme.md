@@ -8,7 +8,7 @@
 - [X] 文件上传
 - [x] Spring风格注解
 - [x] Session管理
-- [x] 返回HTML视图/JSON
+- [x] 返回HTML视图/Text
 ### 说明
 Config.static配置静态资源路径
 @RestController注解编写动态页面
