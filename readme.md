@@ -10,9 +10,9 @@
 - [x] Session管理
 - [x] 返回HTML视图/Text
 ### 说明
-Config.static配置静态资源路径
-@RestController注解编写动态页面
-配置文件为config.properties
+Config.static配置静态资源路径<br>
+@RestController注解编写动态页面<br>
+配置文件为config.properties<br>
 默认端口为8080
 
 运行后访问http://localhost:8080/
