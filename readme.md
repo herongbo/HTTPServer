@@ -10,10 +10,10 @@
 - [x] Session管理
 - [x] 返回HTML视图/Text
 ### 说明
-<strong>config.static</strong>配置静态资源路径<br>
-支持<strong>@Autowired,@Qualifier,@Controller,@RestController,@RequestMapping</strong>视图解析到html文件<br>
-配置文件为<strong>config.properties</strong><br>
-默认端口为<strong>8080</strong>
+`config.static`配置静态资源路径<br>
+支持`@Autowired,@Qualifier,@Controller,@RestController,@RequestMapping`视图解析到html文件<br>
+配置文件为`config.properties`<br>
+默认端口为`8080`
 
 运行后访问http://localhost:8080/
 
